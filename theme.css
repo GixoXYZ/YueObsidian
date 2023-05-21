@@ -97,15 +97,15 @@ body.theme-light.is-mobile {
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
   --color-red-rgb: 228, 55, 75;
-  --color-red: #e4374b;
-  --color-green-rgb: 12, 181, 79;
-  --color-green: #0cb54f;
-  --color-orange: #d96c00;
-  --color-yellow: #bd8e37;
-  --color-cyan: #2db7b5;
-  --color-blue: #086ddd;
-  --color-purple: #876be0;
-  --color-pink: #c32b74;
+  --color-red: #fb464c;
+  --color-green-rgb: 68, 207, 110;
+  --color-green: #6ea82c;
+  --color-orange: #F39B35;
+  --color-yellow: #ffda34;
+  --color-cyan: #53dfdd;
+  --color-blue: #0e86ff;
+  --color-purple: #A06FCA;
+  --color-pink: #ec7db9;
   --color-base-00: #ffffff;
   --color-base-05: #fcfcfc;
   --color-base-10: #f6f7f8; /* code blocks */
@@ -192,12 +192,12 @@ body.theme-dark.is-mobile {
   --color-red-rgb: 251, 70, 76;
   --color-red: #fb464c;
   --color-green-rgb: 68, 207, 110;
-  --color-green: #44cf6e;
-  --color-orange: #e9973f;
-  --color-yellow: #e0de71;
+  --color-green: #6ea82c;
+  --color-orange: #F39B35;
+  --color-yellow: #ffda34;
   --color-cyan: #53dfdd;
-  --color-blue: #027aff;
-  --color-purple: #a882ff;
+  --color-blue: #0e86ff;
+  --color-purple: #A06FCA;
   --color-pink: #fa99cd;
   --color-base-00: #1c1c1c; /* main editor window */
   --color-base-10: #272727; /* code blocks */
