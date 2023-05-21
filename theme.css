@@ -1,13 +1,11 @@
 /*───────────────────────────────────────────────────────
-THINGS
-Version 2.1.9
-Created by @colineckert
+Yue
+Version 1.0.0
+Created by Gixo
 
 Readme:
-https://github.com/colineckert/obsidian-things
+https://github.com/thegixo/YueObsidian
 
-Support my work:
-https://www.buymeacoffee.com/colineckert
 ────────────────────────────────────────────────────── */
 
 /* ─────────────────────────────────────────────────── */
@@ -17,37 +15,34 @@ https://www.buymeacoffee.com/colineckert
 @charset "UTF-8";
 body {
   /* Colors */
-  --base-h: 212; /* Base hue */
-  --base-s: 15%; /* Base saturation */
-  --base-d: 13%; /* Base lightness Dark Mode  - 0 is black */
+  --base-h: 0; /* Base hue */
+  --base-s: 0%; /* Base saturation */
+  --base-d: 20%; /* Base lightness Dark Mode  - 0 is black */
   --base-l: 97%; /* Base lightness Light Mode  - 100 is white */
-  --accent-h: 215; /* Accent hue */
-  --accent-s: 75%; /* Accent saturation */
-  --accent-d: 70%; /* Accent lightness Dark Mode */
-  --accent-l: 60%; /* Accent lightness Light Mode */
+  --accent-h: 210; /* Accent hue */
+  --accent-s: 100%; /* Accent saturation */
+  --accent-d: 44%; /* Accent lightness Dark Mode */
+  --accent-l: 44%; /* Accent lightness Light Mode */
 
   --blue: #2e80f2;
-  --pink: #ff82b2;
-  --green: #3eb4bf;
-  --yellow: #e5b567;
-  --orange: #e87d3e;
-  --red: #e83e3e;
-  --purple: #9e86c8;
+  --pink: #da7dae;
+  --green: #00A7AA;
+  --yellow: #E6DB74;
+  --orange: #F39B35;
+  --red: #FC4384;
+  --purple: #A06FCA;
+  --white: #ffffff;
 
-  --h1-color: var(--text-normal);
-  --h2-color: var(--text-normal);
-  --h3-color: var(--blue);
-  --h4-color: var(--yellow);
-  --h5-color: var(--red);
-  --h6-color: var(--text-muted);
+  --h1-color: var(--white);
+  --h2-color: var(--white);
+  --h3-color: var(--white);
+  --h4-color: var(--white);
+  --h5-color: var(--white);
+  --h6-color: var(--white);
 
-  --strong-color: var(--pink);
-  --em-color: var(--pink);
-  --quote-color: var(--green);
-
-  --tag-background-color-l: #bde1d3;
-  --tag-font-color-l: #1d694b;
-  --tag-background-color-d: #1d694b;
+  --tag-background-color-l: #0e86ff;
+  --tag-font-color-l: #000000;
+  --tag-background-color-d: #0070e0;
   --tag-font-color-d: #ffffff;
 
   /* Font families */
@@ -139,9 +134,16 @@ body.theme-light.is-mobile {
   --background-secondary-alt: var(--color-base-05);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
-  --text-highlight-bg-l: rgba(255, 208, 0, 0.4);
-  --text-highlight-bg: var(--text-highlight-bg-l);
-  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-highlight-bg: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l))
+    );
+  --text-highlight-bg-active: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 10%)
+    );
   --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
     0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
     0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
@@ -157,37 +159,28 @@ body.theme-light.is-mobile {
   --tag-color: var(--tag-font-color-l);
 
   /* --text-normal: hsl(var(--base-h), var(--base-s), calc(var(--base-l) - 80%)); */
-  --text-muted: hsl(
-    var(--base-h),
-    calc(var(--base-s) - 5%),
-    calc(var(--base-l) - 60%)
-  );
-  --text-faint: hsl(
-    var(--base-h),
-    calc(var(--base-s) - 5%),
-    calc(var(--base-l) - 30%)
-  );
-  --text-formatted: hsl(
-    var(--base-h),
-    calc(var(--base-s) - 5%),
-    calc(var(--base-l) - 35%)
-  );
-  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --text-accent-hover: hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) - 10%)
-  );
+  --text-muted: hsl(var(--base-h),
+      calc(var(--base-s) - 5%),
+      calc(var(--base-l) - 60%));
+  --text-faint: hsl(var(--base-h),
+      calc(var(--base-s) - 5%),
+      calc(var(--base-l) - 30%));
 
-  --atom-gray-1: #383a42;
-  --atom-gray-2: #383a42;
-  --atom-red: #e75545;
-  --atom-green: #4ea24c;
-  --atom-blue: #3d74f6;
-  --atom-purple: #a625a4;
-  --atom-aqua: #0084bc;
-  --atom-yellow: #e35649;
-  --atom-orange: #986800;
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --text-accent-hover: hsl(var(--accent-h),
+      var(--accent-s),
+      calc(var(--accent-l) - 10%));
+
+  --atom-gray-1: #383838;
+  --atom-gray-2: #383838;
+  --atom-white: #464646;
+  --atom-red: #FC4384;
+  --atom-orange: #F39B35;
+  --atom-green: #98E342;
+  --atom-aqua: #00A7AA;
+  --atom-purple: #A06FCA;
+  --atom-blue: #0e86ff;
+  --atom-yellow: #E6DB74;
 }
 
 .theme-dark,
@@ -206,14 +199,14 @@ body.theme-dark.is-mobile {
   --color-blue: #027aff;
   --color-purple: #a882ff;
   --color-pink: #fa99cd;
-  --color-base-00: #1c2127; /* main editor window */
-  --color-base-10: #282c34; /* code blocks */
-  --color-base-20: #181c20; /* top unselected unfocused nav */
-  --color-base-25: #2c313c;
-  --color-base-30: #35393e;
-  --color-base-35: #3f3f3f;
+  --color-base-00: #1c1c1c; /* main editor window */
+  --color-base-10: #272727; /* code blocks */
+  --color-base-20: #1c1c1c; /* top unselected unfocused nav */
+  --color-base-25: #1c1c1c;
+  --color-base-30: #272727;
+  --color-base-35: #272727;
   --color-base-40: #555;
-  --color-base-50: #666; /* unfocused text */
+  --color-base-50: #666;/* unfocused text */
   --color-base-60: #999;
   --color-base-70: #bababa;
   --color-base-100: #dadada;
@@ -222,21 +215,30 @@ body.theme-dark.is-mobile {
   --color-accent-1: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l) - 3.8%)
+    calc(var(--accent-l) + 2.5%)
   );
   --color-accent-2: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l) + 3.8%)
+    calc(var(--accent-l) + 5%)
   );
   --titlebar-background-focused: var(--color-base-10);
   --background-modifier-form-field: var(--color-base-25);
   --background-secondary-alt: var(--color-base-30);
   --interactive-normal: var(--color-base-30);
   --interactive-hover: var(--color-base-35);
-  --text-highlight-bg-d: rgba(255, 208, 0, 0.4);
-  --text-highlight-bg: var(--text-highlight-bg-d);
-  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --text-highlight-bg: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l))
+    );
+  --text-highlight-bg-active: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 10%)
+    );
   --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
   --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
     0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),
@@ -261,21 +263,20 @@ body.theme-dark.is-mobile {
   );
 
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
-  --text-accent-hover: hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-d) + 12%)
-  );
+  --text-accent-hover: hsl(var(--accent-h),
+      var(--accent-s),
+      calc(var(--accent-d) + 12%));
 
-  --atom-gray-1: #5c6370;
-  --atom-gray-2: #abb2bf;
-  --atom-red: #e06c75;
-  --atom-orange: #d19a66;
-  --atom-green: #98c379;
-  --atom-aqua: #56b6c2;
-  --atom-purple: #c678dd;
-  --atom-blue: #61afef;
-  --atom-yellow: #e5c07b;
+  --atom-gray-1: #5c5c5c;
+  --atom-gray-2: #ababab;
+  --atom-white: #d4d4d4;
+  --atom-red: #FC4384;
+  --atom-orange: #F39B35;
+  --atom-green: #98E342;
+  --atom-aqua: #00A7AA;
+  --atom-purple: #A06FCA;
+  --atom-blue: #0e86ff;
+  --atom-yellow: #E6DB74;
 }
 
 body.is-mobile.theme-dark.mobile-black-background {
@@ -292,8 +293,8 @@ body.is-mobile.theme-dark.mobile-black-background {
 }
 
 /* H2 styling */
-body.h2-underline h2,
-body.h2-underline .HyperMD-header.HyperMD-header-2.cm-line {
+h2,
+.HyperMD-header.HyperMD-header-2.cm-line {
   border-bottom: 2px solid var(--background-modifier-border);
   width: 100%;
   padding-bottom: 2px;
@@ -320,7 +321,7 @@ body:not(.default-font-color) span:not(.cm-highlight).cm-strong {
 
 /* Italics */
 body:not(.default-font-color) em,
-body:not(.default-font-color) span:not(.cm-highlight).cm-em {
+body:not(.default-font-color) .cm-em {
   color: var(--em-color);
 }
 
@@ -334,16 +335,15 @@ body:not(.default-font-color) mark em {
 .cm-formatting-strong,
 .cm-formatting-em,
 .cm-formatting.cm-formatting-quote {
-  color: var(--text-formatted) !important;
+  color: var(--text-faint) !important;
   font-weight: var(--normal-weight);
   letter-spacing: -0.02em;
 }
 
 /* Completed checkboxes */
-.markdown-preview-view ul > li.task-list-item.is-checked,
+.markdown-preview-view ul>li.task-list-item.is-checked,
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='x'],
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task='X'] {
-  text-decoration: none;
   color: var(--text-faint);
 }
 
@@ -354,26 +354,15 @@ img {
 }
 
 .theme-dark .modal-container .suggestion-item.is-selected {
-  background: var(--color-accent);
+  background: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l)));
 }
 
-/* Focus active line */
-body.active-line .cm-active:not(.HyperMD-header, .HyperMD-codeblock)::before,
-body.active-line .cm-active.HyperMD-quote::before {
-  content: '';
-  height: 100%;
-  position: absolute;
-  left: -1.125em;
-  border-left: 3px solid var(--color-accent);
-  border-radius: 10px 0 0 10px;
-  opacity: 0.85;
-}
-
-/* Highlight styling */
+/* Highlight styles */
 span.cm-highlight,
 .markdown-preview-view mark,
 span.search-result-file-matched-text {
-  padding: 0.1em 0;
+  padding: 0.05em 0.15em;
+  border-radius: 0.2em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
@@ -520,8 +509,7 @@ body:not(.no-codeblock-line-numbers) .markdown-preview-view pre code {
 }
 
 /* ------------------- */
-/* One Dark Syntax Coloring */
-/* Source: https://github.com/AGMStudio/prism-theme-one-dark */
+/* Yue Syntax Coloring */
 /* ------------------- */
 .theme-light .token.comment {
   color: #ababab;
@@ -558,7 +546,6 @@ span.token.variable,
 .token.attr-name,
 .token.deleted,
 .cm-attribute,
-.cm-number,
 .cm-property.cm-string {
   color: var(--atom-orange) !important;
 }
@@ -583,6 +570,7 @@ span.token.variable,
 .cm-keyword {
   color: var(--atom-purple);
 }
+.cm-atom,
 .cm-builtin,
 .token.function,
 .token.method,
@@ -591,7 +579,6 @@ span.token.variable,
 }
 .token.class-name,
 .token.constant,
-.cm-atom,
 code .cm-tag,
 .cm-variable-2,
 .cm-type {
@@ -617,12 +604,10 @@ code .cm-tag,
 /* Mobile toolbar button */
 /* --------------------- */
 
-body.is-mobile:not(.floating-button-off):not(.advanced-toolbar)
-  .view-action:nth-last-of-type(2),
-body.is-mobile:not(.floating-button-off):not(.advanced-toolbar)
-  .view-action:nth-last-of-type(2) {
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(5),
+body.is-mobile:not(.floating-button-off):not(.advanced-toolbar) .view-action:nth-last-of-type(4) {
   color: white;
-  background-color: var(--blue);
+  background-color: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l)));
   opacity: 1;
   top: calc(90vh - 110px);
   display: flex;
@@ -641,12 +626,10 @@ body.is-mobile:not(.floating-button-off):not(.advanced-toolbar)
     16.7px 4.2px 33.4px rgba(0, 0, 0, 0.05), 40px 10px 80px rgba(0, 0, 0, 0.07);
 }
 
-body.is-mobile:not(.floating-button-off).advanced-toolbar
-  .view-action:nth-last-of-type(2),
-body.is-mobile:not(.floating-button-off).advanced-toolbar
-  .view-action:nth-last-of-type(2) {
+body.is-mobile:not(.floating-button-off).advanced-toolbar .view-action:nth-last-of-type(5),
+body.is-mobile:not(.floating-button-off).advanced-toolbar .view-action:nth-last-of-type(4) {
   color: white;
-  background-color: var(--blue);
+  background-color: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l)));
   opacity: 1;
   position: fixed;
   top: calc(100vh - 138px);
@@ -1063,78 +1046,12 @@ body:not(.tasks) li[data-task='d'].task-list-item.is-checked {
   cursor: pointer;
 }
 
-.checklist-plugin-main .classic .content > p {
+.checklist-plugin-main .classic .content>p {
   font-size: var(--font-ui-smaller);
 }
 
 .checklist-plugin-main .toggle .checkbox {
   border-radius: var(--checkbox-radius) !important;
-}
-
-/* ---------------  */
-/* Kanban */
-/* --------------- */
-
-body:not(.no-kanban-styles) .kanban-plugin {
-  --dot-color: hsl(0 0% 40% / 10%);
-  --dot-spacing: 9px;
-  --dot-size: 1px;
-}
-body:not(.no-kanban-styles) .kanban-plugin__board {
-  background-image: radial-gradient(
-    circle,
-    var(--dot-color) var(--dot-size),
-    transparent var(--dot-size)
-  );
-  border-top: var(--thin-border);
-  background-size: var(--dot-spacing) var(--dot-spacing);
-  background-attachment: local;
-}
-
-body:not(.no-kanban-styles) .kanban-plugin__board > div {
-  margin: 0 auto;
-}
-body:not(.no-kanban-styles) .kanban-plugin__item-form {
-  border-top: none;
-}
-body:not(.no-kanban-styles) .kanban-plugin__lane-header-wrapper {
-  border-bottom: 0;
-}
-body:not(.no-kanban-styles) .kanban-plugin button {
-  box-shadow: none;
-}
-body:not(.no-kanban-styles) .kanban-plugin__item-button-wrapper > button:hover {
-  color: var(--text-normal);
-  background: var(--background-modifier-hover);
-}
-body:not(.no-kanban-styles) .kanban-plugin__item-button-wrapper {
-  border-top: none;
-}
-body:not(.no-kanban-styles) .kanban-plugin__lane {
-  border: 1px solid transparent;
-}
-body:not(.no-kanban-styles) .kanban-plugin__item-content-wrapper {
-  box-shadow: none;
-}
-
-body:not(.no-kanban-styles):not(.is-mobile)
-  .kanban-plugin__grow-wrap
-  > textarea:focus {
-  box-shadow: none;
-}
-body:not(.no-kanban-styles) .kanban-plugin__item-input-actions button,
-body:not(.no-kanban-styles) .kanban-plugin__lane-input-actions button {
-  font-size: var(--font-adaptive-small);
-}
-body:not(.no-kanban-styles)
-  .kanban-plugin__lane-header-wrapper
-  .kanban-plugin__grow-wrap
-  > textarea,
-body:not(.no-kanban-styles)
-  .kanban-plugin__lane-input-wrapper
-  .kanban-plugin__grow-wrap
-  > textarea {
-  background: transparent;
 }
 
 /* ─────────────────────────────────────────────────── */
@@ -1161,24 +1078,6 @@ settings:
         title: Disable mobile floating-action button
         description: Revert placement of edit/preview button to default in header (mobile)
         id: floating-button-off
-        type: class-toggle
-        default: false
-    -
-        title: Highlight active line
-        description: Change background color of current working line
-        id: active-line
-        type: class-toggle
-        default: false
-    -
-        title: Disable enhanced code blocks
-        description: Remove line numbers and additional styling to code blocks
-        id: no-codeblock-line-numbers
-        type: class-toggle
-        default: false
-    -
-        title: Disable Kanban board styles
-        description: Remove minimalist styling to the Kanban plugin
-        id: no-kanban-styles
         type: class-toggle
         default: false
     -
@@ -1450,7 +1349,7 @@ settings:
         id: credits
         title: Credits
         type: heading
-        description: Created with ❤︎ by @colineckert. Support @colineckert at buymeacoffee.com/colineckert
+        description: Created with ❤︎ by Gixo. Forked from Things theme.
         level: 2
         collapsed: true
 
