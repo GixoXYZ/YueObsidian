@@ -2,9 +2,18 @@
 
 ![](assets/main-demo-big.png)
 
+
 This theme is a fork of [Things Theme](https://github.com/colineckert/obsidian-things) by [ Colin Eckert](https://github.com/colineckert).
 
 Color scheme of this theme is from my Yue theme family.
+
+## Screenshots:
+
+![](assets/with-icons-demo-dark.png)
+
+![](assets/with-icons-demo-light.png)
+
+Colorful icons in the screenshots are my [Obsidian Yue Icons](https://github.com/thegixo/YueObsidianIcons) which you can set by [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder) plugin.
 
 ## Features
 
