@@ -1,6 +1,6 @@
 # Yue
 
-![](assets/main-demo.png)
+![](assets/main-demo-big.png)
 
 This theme is a fork of [Things Theme](https://github.com/colineckert/obsidian-things) by [ Colin Eckert](https://github.com/colineckert).
 
