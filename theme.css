@@ -151,7 +151,7 @@ body.theme-light.is-mobile {
 
   /* --text-normal: hsl(var(--base-h), var(--base-s), calc(var(--base-l) - 80%)); */
   --text-muted: hsl(var(--base-h), calc(var(--base-s) - 5%), calc(var(--base-l) - 60%));
-  --text-faint: hsl(var(--base-h), calc(var(--base-s) - 5%), calc(var(--base-l) - 30%));
+  --text-faint: hsl(var(--base-h), calc(var(--base-s) - 5%), calc(var(--base-l) - 40%));
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 20%));
 
@@ -227,7 +227,7 @@ body.theme-dark.is-mobile {
   --tag-color: var(--tag-font-color-d);
 
   --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
-  --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
+  --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 40%));
   --text-formatted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 50%));
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 20%));
