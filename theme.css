@@ -599,7 +599,9 @@ span.token.variable,
 .cm-keyword {
   color: var(--atom-purple);
 }
-.cm-atom,
+.cm-atom {
+color: hsl(var(--accent-h),var(--accent-s),var(--accent-l));
+}
 .cm-builtin,
 .token.function,
 .token.method,
