@@ -33,35 +33,36 @@ body {
   --purple: #A06FCA;
   --white: #ffffff;
 
+  /* Header colors */
   --h1-color: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l)
     );
   --h2-color: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l)
     );
   --h3-color: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l)
     );
   --h4-color: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l)
     );
   --h5-color: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l)
     );
   --h6-color: hsl(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l)
     );
     
   --tag-background-color-l: hsla(var(--accent-h), var(--accent-s), var(--accent-l), var(--accent-alpha));
@@ -81,6 +82,7 @@ body {
   --font-editor: var(--font-editor-override), var(--font-text-override),
     var(--font-editor-theme);
 
+  /* Header sizes */
   --h1-size: 1.7rem;
   --h2-size: 1.5rem;
   --h3-size: 1.2rem;
