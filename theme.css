@@ -21,8 +21,9 @@ body {
   --base-l: 97%; /* Base lightness Light Mode  - 100 is white */
   --accent-h: 210; /* Accent hue */
   --accent-s: 100%; /* Accent saturation */
-  --accent-l: 44%; /* Accent lightness Light Mode */
+  --accent-l: 44%; /* Accent lightness */
   --accent-alpha: 20%;
+
   --blue: #2e80f2;
   --pink: #da7dae;
   --green: #00A7AA;
@@ -157,15 +158,17 @@ body.theme-light.is-mobile {
   --background-secondary-alt: var(--color-base-05);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
-  --text-highlight-bg: hsl(
+  --text-highlight-bg: hsla(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l),
+    calc(var(--accent-alpha) + 30%)
     );
-  --text-highlight-bg-active: hsl(
+  --text-highlight-bg-active: hsla(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l) - 10%)
+    var(--accent-l),
+    calc(var(--accent-alpha) + 50%)
     );
   --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
     0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
@@ -252,15 +255,17 @@ body.theme-dark.is-mobile {
   --interactive-hover: var(--color-base-35);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
-  --text-highlight-bg: hsl(
+  --text-highlight-bg: hsla(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l))
+    var(--accent-l),
+    calc(var(--accent-alpha) + 30%)
     );
-  --text-highlight-bg-active: hsl(
+  --text-highlight-bg-active: hsla(
     var(--accent-h),
     var(--accent-s),
-    calc(var(--accent-l) + 10%)
+    var(--accent-l),
+    calc(var(--accent-alpha) + 50%)
     );
   --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
   --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
@@ -376,8 +381,9 @@ img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.theme-dark .modal-container .suggestion-item.is-selected {
-  background: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l)));
+/* Command Palette */
+.modal-container .suggestion-item.is-selected {
+  background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), var(--accent-alpha));
 }
 
 /* Highlight styles */
