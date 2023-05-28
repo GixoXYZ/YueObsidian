@@ -15,6 +15,8 @@ Color scheme of this theme is from my Yue theme family.
 
 Colorful icons in the screenshots are my [Obsidian Yue Icons](https://github.com/thegixo/YueObsidianIcons) which you can set by [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder) plugin.
 
+![ ](assets/color-change-demo.gif)
+
 ## Features
 
 - Subtle UI colors with vibrant syntax highlight colors
