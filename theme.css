@@ -228,8 +228,8 @@ body.theme-dark.is-mobile {
   --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 65%));
   --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 30%));
   --text-formatted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 50%));
-  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-d));
-  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-d) + 12%));
+  --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 12%));
 
   --atom-gray-1: #5c5c5c;
   --atom-gray-2: #ababab;
