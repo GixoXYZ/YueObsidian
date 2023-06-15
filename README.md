@@ -13,7 +13,7 @@ Color scheme of this theme is from my Yue theme family.
 
 ![](assets/with-icons-demo-light.png)
 
-Colorful icons in the screenshots are my [Obsidian Yue Icons](https://github.com/thegixo/YueObsidianIcons) which you can set by [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder) plugin.
+Colorful icons in the screenshots are my [Obsidian Yue Icons](https://github.com/notgixo/YueObsidianIcons) which you can set by [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder) plugin.
 
 ![ ](assets/color-change-demo.gif)
 
@@ -105,4 +105,4 @@ This theme is a fork of [Things Theme](https://github.com/colineckert/obsidian-t
 
 ## Support
 
-You can help me keep making things like this by checking out my other stuff like [Yue for VSCode](https://github.com/thegixo/YueVscode) and [Yue for Visual Studio](https://github.com/thegixo/YueVisualStudio) or by checking my [Gumroad](https://gixo.gumroad.com/).
+You can help me keep making things like this by checking out my other stuff like [Yue for VSCode](https://github.com/notgixo/YueVscode) and [Yue for Visual Studio](https://github.com/notgixo/YueVisualStudio) or by checking my [Gumroad](https://gixo.gumroad.com/).
