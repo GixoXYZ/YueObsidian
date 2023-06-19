@@ -37,14 +37,6 @@ body {
   --purple: #A06FCA;
   --white: #ffffff;
 
-  /* Header colors */
-  --h1-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --h2-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --h3-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --h4-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --h5-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --h6-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-
   --tag-background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), var(--accent-alpha));
   --tag-font-color-l: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 15%));
   --tag-font-color-d: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 15%));
@@ -155,6 +147,20 @@ body.theme-light.is-mobile {
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 20%));
 
+  /* Header colors */
+  --h1-color: var(--h1-text-color-lt);
+  --h2-color: var(--h2-text-color-lt);
+  --h3-color: var(--h3-text-color-lt);
+  --h4-color: var(--h4-text-color-lt);
+  --h5-color: var(--h5-text-color-lt);
+  --h6-color: var(--h6-text-color-lt);
+  --h1-text-color-lt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h2-text-color-lt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h3-text-color-lt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h4-text-color-lt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h5-text-color-lt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h6-text-color-lt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+
   --atom-gray-1: #383838;
   --atom-gray-2: #383838;
   --atom-white: #464646;
@@ -231,6 +237,20 @@ body.theme-dark.is-mobile {
   --text-formatted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 50%));
   --text-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --text-accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 20%));
+
+  /* Header colors */
+  --h1-color: var(--h1-text-color-dt);
+  --h2-color: var(--h2-text-color-dt);
+  --h3-color: var(--h3-text-color-dt);
+  --h4-color: var(--h4-text-color-dt);
+  --h5-color: var(--h5-text-color-dt);
+  --h6-color: var(--h6-text-color-dt);
+  --h1-text-color-dt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h2-text-color-dt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h3-text-color-dt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h4-text-color-dt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h5-text-color-dt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --h6-text-color-dt: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 
   --atom-gray-1: #5c5c5c;
   --atom-gray-2: #ababab;
@@ -1205,12 +1225,18 @@ settings:
         description: Accepts numbers representing the CSS font-weight
         type: variable-number
         default: 700
-    -
-        id: h1-color
-        title: H1 color
+    - 
+        id: h1-text-color-lt
+        title: Light theme H1 color
         type: variable-color
         format: hex
-        default: '#'
+        default: '#2E80F2'
+    - 
+        id: h1-text-color-dt
+        title: Dark theme H1 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
     - 
         id: level-2-headings
         title: Level 2 Headings
@@ -1230,8 +1256,14 @@ settings:
         type: variable-number
         default: 700
     - 
-        id: h2-color
-        title: H2 color
+        id: h2-text-color-lt
+        title: Light theme H2 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
+    - 
+        id: h2-text-color-dt
+        title: Dark theme H2 color
         type: variable-color
         format: hex
         default: '#2E80F2'
@@ -1259,9 +1291,15 @@ settings:
         description: Accepts numbers representing the CSS font-weight
         type: variable-number
         default: 600
-    -
-        id: h3-color
-        title: H3 color
+    - 
+        id: h3-text-color-lt
+        title: Light theme H3 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
+    - 
+        id: h3-text-color-dt
+        title: Dark theme H3 color
         type: variable-color
         format: hex
         default: '#2E80F2'
@@ -1284,11 +1322,17 @@ settings:
         type: variable-number
         default: 500
     - 
-        id: h4-color
-        title: H4 color
+        id: h4-text-color-lt
+        title: Light theme H4 color
         type: variable-color
         format: hex
-        default: '#E5B567'
+        default: '#2E80F2'
+    - 
+        id: h4-text-color-dt
+        title: Dark theme H4 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
     -
         id: h4-transform
         title: H4 transform
@@ -1321,11 +1365,17 @@ settings:
         type: variable-number
         default: 500
     - 
-        id: h5-color
-        title: H5 color
+        id: h5-text-color-lt
+        title: Light theme H5 color
         type: variable-color
         format: hex
-        default: '#E83E3E'
+        default: '#2E80F2'
+    - 
+        id: h5-text-color-dt
+        title: Dark theme H5 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
     - 
         id: level-6-headings
         title: Level 6 Headings
@@ -1344,12 +1394,18 @@ settings:
         description: Accepts numbers representing the CSS font-weight
         type: variable-number
         default: 400
-    -
-        id: h6-color
-        title: H6 color
+    - 
+        id: h6-text-color-lt
+        title: Light theme H6 color
         type: variable-color
         format: hex
-        default: '#'
+        default: '#2E80F2'
+    - 
+        id: h6-text-color-dt
+        title: Dark theme H6 color
+        type: variable-color
+        format: hex
+        default: '#2E80F2'
     -
         id: credits
         title: Credits
